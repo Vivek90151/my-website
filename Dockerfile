@@ -8,10 +8,10 @@ RUN rm -rf /var/www/html/*
 # Clone repo into correct Apache directory
 RUN apt-get update && apt-get install -y apache2 wget unzip
 
-RUN wget https://github.com/nawab8997/apache/archive/refs/heads/main.zip && \
-    unzip main.zip && \
-    cp -r apache-main/* /var/www/html/ && \
-    rm -rf main.zip apache-main
+RUN wget https://github.com/Vivek90151/my-website/archive/refs/heads/master.zip && \
+unzip master.zip && \
+sudo cp -r my-website-master/* /var/www/html/ && \
+rm -rf master.zip my-website-master
 
 # Expose port
 EXPOSE 80
